@@ -1,0 +1,48 @@
+{%extends 'base.htm'%}
+
+{%block content%}
+<!-- <div class="container col trial" align = center>
+
+  <h1 align = "center" id="log">Login </h1>
+  <form  method="POST">
+    {{form.hidden_tag()}}
+    <div class="form-group">
+      <small class = 'text-danger'></small>
+      {{form.email.label}}{{form.email(class = 'form-control col-md-6' ,placeholder="Email" )}}
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      <small class = 'text-danger'>{{error}}</small>
+    </div>
+    <div class="form-group">
+      {{form.password.label}}{{form.password(class = 'form-control col-md-6' ,placeholder="Password" )}}
+    </div>
+    <div class="form-group">
+      {{form.submit(class ="btn btn-primary change")}}
+    </div>
+  </form>
+</div> -->
+
+<main class="sign-in-hero">
+  <div class="sign-in-hero__content">
+      <h2 class="heading-1">Sign In</h2>
+      <form method="POST">
+        {{form.hidden_tag()}}
+          <div class="input-wrapper">
+            {{form.email(class = 'form__input form__input--big', placeholder='Email')}}
+              <div class="underline"></div>
+           </div>
+           <small class="small-text">we'll never share your email with anyone else</small>
+          <div class="input-wrapper">
+            {{form.password(class = 'form__input form__input--big', placeholder='Passowrsd')}}
+              <div class="underline"></div>
+          </div>
+          <div class="btn-primary">
+            {{form.submit(class="btn-primary__link")}}
+
+          </div>
+          <br>
+          <a href="{{url_for('register')}}" class="btn-account">Don't have an account?</a>
+      </form>
+  </div>
+</main>
+
+{%endblock%}

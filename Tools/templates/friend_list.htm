@@ -1,0 +1,8 @@
+
+{%extends 'base.htm'%}
+{%block content%}
+<br><br><br>
+  {%for i in followed%}
+    <a href = "{{url_for('profile', username = i.username)}}"> {{i.username}}<br>
+  {%endfor%}
+{%endblock%}

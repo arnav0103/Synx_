@@ -1,0 +1,10 @@
+{%extends 'base.htm'%}
+
+{%block content%}
+<br><br><br>
+{{user.username}} <br>
+<h3>Songs this person likes to hear </h3>
+{%for i in song_liked%}
+  <h4>{{i.name}}</h4>
+{%endfor%}
+{%endblock%}

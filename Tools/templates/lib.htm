@@ -1,0 +1,26 @@
+{%extends 'base.htm'%}
+
+{%block content%}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="{{url_for('static', filename="style.css")}}">
+</head>
+<body style="font-family: 'Montserrat', sans-serif;">
+    <ul class="flex-container wrap">
+        <a href="{{url_for('hcali')}}"><li class="flex-item"><img src="../static/img/like.png" class="libimg"><br><b>1</b> - Liked Songs</li></a>
+        <a href="{{url_for('coa')}}"><li class="flex-item"><img src="../static/img/24k goldn.jpg" class="libimg"><br>City of Angels</li></a>
+        <a href="{{url_for('cthru')}}"><li class="flex-item"><img src="../static/img/recent.png" class="libimg" alt="Recently Heard Songs-Image"><br><b>1</b> - Recently Heard</li></a>
+        <a href="{{url_for('lofi')}}"><li class="flex-item"><img src="../static/img/lofi.gif" id="run" class="libimg" alt="Lofi"><br>Lofi Beats<br><sup>playlist</sup></li></a>
+        <a href="{{url_for('lofi')}}"><li class="flex-item"><img src="https://i1.sndcdn.com/artworks-000102769935-nkultb-t500x500.jpg" class="libimg" alt="NCS"><br>No Copyright Sounds<br><sup>playlist</sup></li></a>
+        <a href="{{url_for('lofi')}}"><li class="flex-item"><img src="https://megaphone.imgix.net/podcasts/ae6237e6-7e71-11e9-9c4d-3b02b0eab47c/image/21_VMPN_011_Waveform_Social_3000x3000.png?ixlib=rails-2.1.2&max-w=3000&max-h=3000&fit=crop&auto=format,compress" class="libimg"><br>Waveform<br><sup>podcast</sup></li></a>
+    </ul>
+
+<script src='https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,Array.prototype.includes,CustomEvent,Object.entries,Object.values,URL'></script>
+<script src='https://unpkg.com/plyr@3'></script>
+<script src="../static/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
+</body>
+{%endblock%}

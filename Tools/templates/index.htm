@@ -1,0 +1,123 @@
+{%extends 'base.htm'%}
+
+{%block content%}
+<main class="hero mgb-medium">
+        <div class="hero__content">
+            <p class="hero__top-cap">#1 Trending app</p>
+            <h1 class="hero__heading">The Best Music in your fingertips</h1>
+            <p class="hero__bottom-cap mgb-small">Explore world's best artists with ease</p>
+            <a href="#" class="hero__btn">Get Started</a>
+            <a href="#" class="hero__btn--2">Download</a>
+        </div>
+    </main>
+
+    <section class="about">
+        <div class="about__heading mgb-small">
+            <h1 class="heading-1">We Love Music.</h1>
+            <p class="heading-1-cap">Just as much as you.</p>
+        </div>
+        <p class="about__text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. At provident modi, distinctio omnis odit facere illum eos placeat reiciendis sint nisi repudiandae consequatur excepturi incidunt perspiciatis! Harum ex tempora nulla Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod ut fugiat quam. Maxime sit, hic ad soluta omnis fugit, rem esse temporibus maiores voluptates, saepe libero nisi! Error, totam quis Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nostrum molestias, totam deserunt quibusdam, ad culpa corporis ab modi sint velit illum delectus aspernatur nisi rerum. Excepturi nesciunt veniam sunt.
+        </p>
+    </section>
+
+    <section class="discover mgb-medium">
+        <div class="discover__content">
+            <div class="discover__heading mgb-small">
+                <h1 class="heading-1">Discover.</h1>
+                <p class="heading-1-cap">New music for the new you.</p>
+            </div>
+
+            <div class="discover__carousel-parent">
+                <div class="discover__nav">
+                    <div class="nav-1">
+                    </div>
+                    <div class="nav-2">
+                    </div>
+                    <div class="nav-3">
+                    </div>
+                </div>
+                <div class="discover__carousel">
+                    <div class="discover__slide slide-1 active" id="1">
+                        <div class="overlay"></div>
+                        <div class="play-btn">
+                            <audio src="{{url_for('static' , filename="summer_of_69.wav")}}" controls hidden class="discover__player song-1">
+                                Sorry, your browser doesn't support html5!
+                            </audio>
+                        </div>
+                        <p class="discover__carousel-name">Bryan Adams</p>
+                        <p class="discover__carousel-sname">Summer of '69</p>
+                    </div>
+    
+                    <div class="discover__slide slide-2" id="2">
+                        <div class="overlay"></div>
+                        <div class="play-btn">
+                            <audio src="{{url_for('static' , filename="i_like.wav")}}" controls hidden class="discover__player song-2">
+                                Sorry, your browser doesn't support html5!
+                            </audio>
+                        </div>
+                        <p class="discover__carousel-name">Lauv</p>
+                        <p class="discover__carousel-sname">I like me better</p>
+                    </div>
+
+                    <div class="discover__slide slide-3" id="3">
+                        <div class="overlay"></div>
+                        <div class="play-btn">
+                            <audio src="{{url_for('static' , filename="hotel_california.wav")}}" controls hidden class="discover__player song-3">
+                        </div>
+                        <p class="discover__carousel-name">The Eagles</p>
+                        <p class="discover__carousel-sname">Hote California</p>
+                    </div>
+
+                    <div class="discover__slide slide-4" id="4">
+                        <div class="overlay"></div>
+                        <div class="play-btn">
+                            <audio src="{{url_for('static' , filename="die_for_you.wav")}}" controls hidden class="discover__player song-4">
+                        </div>
+                        <p class="discover__carousel-name">Grabbitz</p>
+                        <p class="discover__carousel-sname">Die for you</p>
+                    </div>
+
+                    <div class="discover__slide slide-5" id="5">
+                        <div class="overlay"></div>
+                        <div class="play-btn">
+                            <audio src="{{url_for('static' , filename="legends.wav")}}" controls hidden class="discover__player song-5">
+                        </div>
+                        <p class="discover__carousel-name">Against The Garden</p>
+                        <p class="discover__carousel-sname">Legends never die</p>
+                    </div>
+
+                    <div class="discover__slide slide-6" id="6">
+                        <div class="overlay"></div>
+                        <div class="play-btn">
+                            <audio src="{{url_for('static' , filename="cia.wav")}}" controls hidden class="discover__player song-6">
+                        </div>
+                        <p class="discover__carousel-name">24k Goldn</p>
+                        <p class="discover__carousel-sname">City of Angels</p>
+                    </div>
+
+                    <div class="discover__slide slide-7" id="7">
+                        <div class="overlay"></div>
+                        <div class="play-btn">
+                            <audio src="{{url_for('static' , filename="ct.wav")}}" controls hidden class="discover__player song-7">
+                        </div>
+                        <p class="discover__carousel-name">Jeremy Zucker</p>
+                        <p class="discover__carousel-sname">Comethru</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="wait">
+        <div class="wait__heading mgb-small">
+            <h1 class="heading-1">Time's Tickin</h1>
+            <p class="heading-1-cap">what are you waiting for</p>
+        </div>
+        <p class="wait__text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. At provident modi, distinctio omnis odit facere illum eos placeat reiciendis sint nisi repudiandae consequatur excepturi incidunt perspiciatis! Harum ex tempora nulla Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod ut fugiat quam. Maxime sit, hic ad soluta omnis fugit, rem esse temporibus maiores voluptates, saepe libero nisi! Error, totam quis Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nostrum molestias, totam deserunt quibusdam, ad culpa corporis ab modi sint velit illum delectus aspernatur nisi rerum. Excepturi nesciunt veniam sunt.
+        </p>
+    </section>
+    <script src="../static/js/func.js"></script>
+{%endblock%}
+

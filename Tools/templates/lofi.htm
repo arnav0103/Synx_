@@ -1,0 +1,195 @@
+{%extends 'base.htm'%}
+
+{%block head%}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+{%endblock%}
+{%block content%}
+    <link rel="stylesheet" href="../static/css/style.css">
+<style>@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+    }    
+
+    body{
+        background-color: #121212;
+    }
+    .container{
+       background-color: #181818;
+       min-height: 72vh;
+       color: white;
+       font-family: 'Varela Round', sans-serif;
+       display: flex;
+       margin: 5% auto;
+       width: 70%;
+       border-radius: 12px;
+       padding: 34px;
+    }
+    
+    .bottom{
+        height: 10vh;
+        bottom: 0;
+        background-color: rgb(255, 232, 224);
+        color: rgb(0, 124, 119);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; 
+        margin: 2%;
+	      width: 95vw;
+        bottom: 0;  
+        position: fixed; 
+        right: 0;
+    }
+    
+    .icons i{
+        cursor: pointer;
+        font-size: 4vh;
+        justify-content: baseline;
+        vertical-align: middle;
+    }
+    
+    #myProgressBar{
+        width: 80vw; 
+        cursor: pointer;
+        background:rgb(153, 221, 200);
+    }
+    
+    .songItemContainer{
+      margin-top: 10%;
+    }
+    
+    .songItem{
+        height: 10vh;
+        display: flex;
+        width: 60vw;
+        color: rgb(153, 221, 200);
+        margin: auto;
+        align-items: center;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .songItem img{
+        width: 4vw;
+        margin-left: 12%;
+        border-radius: 34px;
+    }
+    
+    .songInfo{
+        position: absolute;
+        width: 80vw;
+    }
+    
+    .songInfo img{
+        opacity: 0;
+        transition: opacity 0.4s ease-in;
+    }
+    
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 20px 0;
+  width: 100%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: rgb(153, 221, 200);
+  border-radius: 25px;
+}
+input[type=range]::-webkit-slider-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: rgb(0, 124, 119);
+  box-shadow: 0 0 4px 0 rgb(255, 255, 255);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -8px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: rgb(20, 160, 155);
+}
+.range-wrap{
+  width: 500px;
+  position: relative;
+}
+.range-value{
+  position: absolute;
+  top: -50%;
+}
+   </style>
+<div class="container">
+  
+  <div class="songInfo">
+    <marquee width="75%" direction="right" height="100px">
+      <span id="masterSongName">Select a song to play!</span>
+    </marquee>
+    <br>
+  </div>
+        <div class="songList">
+            <div class="songItemContainer">
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName"></span>
+                    <span class="songlistplay"><span class="timestamp"><i id="0" class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div><br>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName"></span>
+                    <span class="songlistplay"><span class="timestamp"><i id="1" class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div><br>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName"></span>
+                    <span class="songlistplay"><span class="timestamp"><i id="2" class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div><br>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName"></span>
+                    <span class="songlistplay"><span class="timestamp"><i id="3" class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div><br>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName"></span>
+                    <span class="songlistplay"><span class="timestamp"><i id="4" class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div><br>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName"></span>
+                    <span class="songlistplay"><span class="timestamp"><i id="5" class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div><br>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName"></span>
+                    <span class="songlistplay"><span class="timestamp"><i id="6" class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div><br>
+            </div>
+        </div>
+        <div class="songBanner"></div>
+    </div>
+
+    <div class="bottom">
+
+      
+        
+        <div class="icons">
+            <!-- fontawesome icons -->
+            <i class="fas fa-3x fa-step-backward" id="previous"></i>
+            <i class="far fa-3x fa-play-circle" id="masterPlay"></i>
+            <i class="fas fa-3x fa-step-forward" id="next"></i> 
+            <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
+        </div>
+    </div>
+    <script src="../static/js/simple.js"></script>
+    <script src="https://kit.fontawesome.com/26504e4a1f.js" crossorigin="anonymous"></script>
+</body>
+{%endblock%}
